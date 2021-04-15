@@ -1,0 +1,2 @@
+# Media-Literacy-Final-Project
+The final project for my media literacy class is a very open-ended task to create something that is a inspired response to some other work in media. I like Dungeons and Dragons so I decided to make a downgraded clone of D&amp;D Beyond's character creator and encounter builder, I have other and way more lofty goals in mind for this but they are probably beyond my skill level for now.
