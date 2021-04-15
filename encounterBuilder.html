@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+	<TITLE>Encounter Builder</TITLE>
+
+	<SCRIPT LANGUAGE="JavaScript">
+		var numOfMonsters = 0
+		function addMonster() {
+			if(numOfMonsters == 0) {
+				document.write('<INPUT TYPE="submit" VALUE="+ Monster" onClick="addMonster();">');
+			} else {
+				document.write("<FORM STYLE='background-color: rgb(200, 200, 200);padding: 5px;margin-top: 1em;margin-bottom: 1em;border: 1px solid black;'>");
+				document.write('<INPUT TYPE="text" PLACEHOLDER="Name">');
+				document.write('<INPUT TYPE="number" PLACEHOLDER="Quantity">');
+				document.write('<SELECT>');
+				document.write('<OPTION VALUE="invalid">type');
+				document.write('<OPTION VALUE="abberation">Abberation');
+				document.write('<OPTION VALUE="beast">Beast');
+				document.write('<OPTION VALUE="celestial">Celestial');
+				document.write('<OPTION VALUE="construct">Construct');
+				document.write('<OPTION VALUE="dragon">Dragon');
+				document.write('<OPTION VALUE="elemental">Elemental');
+				document.write('<OPTION VALUE="fey">Fey');
+				document.write('<OPTION VALUE="fiend">Fiend');
+				document.write('<OPTION VALUE="giant">Giant');
+				document.write('<OPTION VALUE="humanoid">Humanoid');
+				document.write('<OPTION VALUE="monstrosity">Monstrosity');
+				document.write('<OPTION VALUE="plant">Plant');
+				document.write('<OPTION VALUE="undead">Undead');
+				document.write('</SELECT><BR>');
+				document.write('<INPUT TYPE="number" PLACEHOLDER="HP">');
+				document.write('<INPUT TYPE="number" PLACEHOLDER="AC">');
+				document.write('<INPUT TYPE="number" PLACEHOLDER="Movement Speed (FT)"><BR>');
+				document.write('<TEXTAREA ROWS="10" COLS="100" PLACEHOLDER="Format: WEAPON DAMAGETYPE DAMAGEDICE"></TEXTAREA>');
+				document.write('<BR><INPUT TYPE="submit" VALUE="Save" onClick="saveMonster();">');
+				document.write('</FORM>');
+			}
+			numOfMonsters++;
+		}
+	</SCRIPT>
+	
+	<STYLE>
+		.form-box {
+            background-color: rgb(200, 200, 200);
+            padding: 5px;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border: 1px solid black;
+        }
+
+        label {
+            font-size: 20px;
+        }
+	</STYLE>
+	
+
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+	<INPUT TYPE="submit" VALUE="+ Monster" onClick="addMonster();">
+</BODY>
+
+</HTML>

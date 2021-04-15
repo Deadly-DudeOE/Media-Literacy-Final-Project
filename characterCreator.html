@@ -1,0 +1,125 @@
+<HTML> 
+
+<HEAD> 
+    <TITLE>D&D Character Sheet</TITLE> 
+
+    <SCRIPT LANGUAGE="JavaScript">
+		function checkProficiencies() {
+			switch(document.form[0].select.valueOf) {
+				case "invalid" {alert("You must choose a class");}
+			}
+		}
+    </SCRIPT> 
+
+    <STYLE>
+        .form-box {
+            background-color: rgb(200, 200, 200);
+            padding: 5px;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border: 1px solid black;
+        }
+
+        label {
+            font-size: 20px;
+        }
+    </STYLE>
+</HEAD> 
+
+<BODY> 
+    <FORM> 
+        <DIV CLASS="basic-info">
+
+            <DIV CLASS="form-box">
+                <LABEL FOR="charName">Character Creator</LABEL><BR>
+                <INPUT TYPE="text" NAME="name-input" PLACEHOLDER="Your character's name">
+
+                <SELECT onClick="checkProficiencies;">
+					<OPTION VALUE="invalid">class
+					<OPTION VALUE="artificer">Artificer
+					<OPTION VALUE="barbarian">Barbarian
+					<OPTION VALUE="bard">Bard
+					<OPTION VALUE="cleric">Cleric
+					<OPTION VALUE="druid">Druid
+					<OPTION VALUE="fighter">Fighter
+					<OPTION VALUE="monk">Monk
+					<OPTION VALUE="paladin">Paladin
+					<OPTION VALUE="ranger">Ranger
+					<OPTION VALUE="rogue">Rogue
+					<OPTION VALUE="sorcerer">Sorcerer
+					<OPTION VALUE="warlock">Warlock
+					<OPTION VALUE="wizard">Wizard
+				</SELECT>
+				
+				<SELECT>
+					<OPTION VALUE="invalid">background
+					<OPTION VALUE="acolyte">Acolyte
+					<OPTION VALUE="charlatan">Charlatan
+					<OPTION VALUE="criminal">Criminal
+					<OPTION VALUE="entertainer">Entertainer
+					<OPTION VALUE="folkHero">Folk Hero
+					<OPTION VALUE="guildArtisan">Guild Artisan
+					<OPTION VALUE="hermit">Hermit
+					<OPTION VALUE="noble">Noble
+					<OPTION VALUE="outlander">Outlander
+					<OPTION VALUE="sage">Sage
+					<OPTION VALUE="sailor">Sailor
+					<OPTION VALUE="soldier">Soldier
+					<OPTION VALUE="urchin">Urchin
+				</SELECT>
+				
+				<INPUT TYPE="submit" VALUE="New Character" onClick="newCharacter();" style="float: right;">
+				<INPUT TYPE="submit" VALUE="Save Character" onClick="saveCharacter();" style="float: right;">
+			</DIV>
+				
+            <DIV CLASS="form-box">
+                <LABEL FOR="character-race-input">Character Race</LABEL><BR>
+
+                <P CLASS="mini-label">Common Races</P>
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="dwarf">Dwarf
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="elf">Elf
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="halfling">Halfling
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="human">Human<BR>
+
+                <P CLASS="mini-label">Uncommon Races</P>
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="dragonborn">Dragonborn
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="gnome">Gnome
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="half-elf">Half-Elf
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="half-orc">Half-Orc
+                <INPUT TYPE="radio" NAME="character-race-input" VALUE="tiefling">Tiefling
+        </DIV>
+
+        <DIV CLASS="form-box">
+            <LABEL>Ability Scores</LABEL><BR>
+
+            <P CLASS="mini-label">Strength</P>
+            <INPUT TYPE="number" NAME="strength-input">
+
+            <P CLASS="mini-label">Dexterity</P>
+            <INPUT TYPE="number" NAME="dexterity-input">
+
+            <P CLASS="mini-label">Constitution</P>
+            <INPUT TYPE="number" NAME="constitution-input">
+
+            <P CLASS="mini-label">Intelligence</P> 
+            <INPUT TYPE="number" NAME="intelligence-input">
+
+            <P CLASS="mini-label">Wisdom</P>
+            <INPUT TYPE="number" NAME="wisdom-input">
+
+            <P CLASS="mini-label">Charisma</P>
+            <INPUT TYPE="number" NAME="charisma-input">
+        </DIV>
+
+        <DIV CLASS="form-box">
+            <INPUT TYPE="checkbox">
+        </DIV>
+
+        <DIV CLASS="form-box">
+            <LABEL>Details</LABEL><BR>
+            <TEXTAREA ROWS="10" COLS="50" NAME="backstoryInput" PLACEHOLDER="Your character's backstory"></TEXTAREA> 
+        </DIV>
+    </FORM> 
+</BODY> 
+
+</HTML>
